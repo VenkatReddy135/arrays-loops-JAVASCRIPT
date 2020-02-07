@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title> 
+</head>
+<body>
+    <script>
+        var a=[];
+        var b=[];
+        var c=[];
+        var d=[];
+        function add(n){
+            for(i=1;i<n;i++){
+                if(i%3==0 && i%5===0){
+                    console.log("welcome");
+                    a.push(i);
+                }
+                else if(i%5===0){
+                  console.log("hello")
+                  b.push(i)
+                }else if(i%3==0){
+                  console.log("hi")
+                  c.push(i);
+                }
+                else{
+                    console.log(i);
+                    d.push(i);
+                }
+            }
+
+           var m=a.concat(b).concat(c).concat(d);
+           console.log(m);
+           var k=m.sort(function(a,b){
+               return a-b;
+           });
+           console.log(k);
+            var string=[];
+            k.forEach(function(element){
+                   string+=(element + " ,");
+            })
+            console.log(string);
+        }
+        add(50);
+    
+    ///addition of array numbers
+      var arr=[1,3,2,5,4,6];
+     var j= arr.sort(function(a,b){
+        return a-b
+      })
+      console.log(j);
+
+      total=0;
+      for(i=0;i<arr.length;i++){
+          total+=arr[i];
+        
+      }
+      console.log(total);
+
+////pushing numbers into array
+       var arr=[]
+      function addition(n){
+          var total=0;
+          for(i=1;i<n;i++){
+              arr.push(i)
+              total+=i;
+          }
+          console.log(total)
+
+      }
+      addition(20);
+      console.log(arr)
+       
+    </script>
+    
+</body>
+</html>
